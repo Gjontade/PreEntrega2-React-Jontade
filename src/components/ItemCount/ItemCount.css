@@ -1,5 +1,6 @@
 .Controls {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center; 
 }
@@ -9,12 +10,18 @@
     color: #FFF6E0;
     background-color:goldenrod;
     border-radius: 5px;
+    margin: 5px;
+    padding: 5px 10px;
 }
-.Agregar:hover {
+
+.Button:hover {
     background-color: goldenrod;
     border-color: #212529;
     color: #FFF6E0;
 }
+
 .Number {
-    margin: 10px 20px 10px 20px;
-}
+    font-size: 24px;
+    margin: 10px 20px;
+    color: white;
+} 

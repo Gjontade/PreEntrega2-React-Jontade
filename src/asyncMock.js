@@ -15,7 +15,7 @@ const products = [
         category: 'Proteinas',
         img: 'https://goldnutrition.com.ar/images/2022/08/10/vegetal_protein_isolate_gold_nutrition_doypack_2lb_doypack_vegan.png',
         stock: 10,
-        description: 'Blend perfectamente aislada con un aporte de 30g de proteína natural por dosis, altamente rica en aminoácidos de cadena ramifcada y aminoácidos esenciales. Fortificada con Vitamina B12'
+        description: '30g de proteína natural por dosis, altamente rica en aminoácidos de cadena ramifcada y aminoácidos esenciales. Fortificada con Vitamina B12.'
     },
     {
         id: '3',
@@ -24,7 +24,7 @@ const products = [
         category: 'Proteinas',
         img: 'https://goldnutrition.com.ar/images/2022/12/07/whey_ripped_protein_gold_nutrition_proetina_quemadora_suplemento_deportivo_cafeina_carnitina_taurina.png',
         stock: 10,
-        description: 'La fórmula proteica elaborada por Gold Nutrition. Consiste en un producto “Todo-en-Uno” destinado a promover la pérdida de grasa y el mantenimiento de la masa muscular unificando los ingredientes más eficaces para eliminar grasas y construir músculos.'
+        description: 'Promueve la pérdida de grasa y el mantenimiento de la masa muscular unificando los ingredientes más eficaces para eliminar grasas y construir músculos.'
     },
     {
         id: '4',
@@ -33,7 +33,7 @@ const products = [
         category: 'Aminoacidos',
         img: 'https://goldnutrition.com.ar/images/2023/09/07/amino-essential-gold-nutrition-prime-line-supplement-bcaa-colageno-glutamina-aminoacidos-esenciales2.png',
         stock: 10,
-        description: 'El poder de 19 aminoácidos claves, con un enorme valor biológico que trabajan en sinergia regulando el crecimiento muscular, la reparación, el buen funcionamiento y la estructura de todas las células vivas.'
+        description: 'Aminoácidos claves, con un enorme valor biológico que trabajan en sinergia regulando el crecimiento muscular, la reparación, el buen funcionamiento y la estructura de todas las células vivas.'
     },
     {
         id: '5',
@@ -102,12 +102,13 @@ export const getProducts = () => {
 export const getProductById = (productId) => {
     return new Promise ((resolve, reject) => {
         setTimeout (() => {
-            const product = products.filter(prod => prod.id === productId);
-            if (product) {
-                resolve(product);
-            } else {
-                reject (new Error ('Producto no encontrado'))
-            }
+            //const product = products.find(prod => prod.id === productId);
+            resolve(products.find(prod => prod.id === productId))
+            // if (product) {
+            //     resolve(product);
+            // } else {
+            //     reject (new Error ('Producto no encontrado'))
+            // }
         }, 500)
     })
 };

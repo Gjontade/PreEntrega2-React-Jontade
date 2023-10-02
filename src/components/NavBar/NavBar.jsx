@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -19,7 +20,7 @@ function NavBar() {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="m-auto">
-						<Nav.Link href="#home">INICIO</Nav.Link>
+						<Nav.Link href="#Home">INICIO</Nav.Link>
 						<Nav.Link href="#Empresa">EMPRESA</Nav.Link>
 						<Nav.Link href="#Contacto">CONTACTO</Nav.Link>
 						<NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">
